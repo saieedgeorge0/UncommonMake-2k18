@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+    <title>Uncommon Makes</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <script defer src="js/script.js"></script>
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.3/dist/smoothscroll.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.3.1.slim.js"   integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="   crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="section-container collapsed" id="inputLanding">
+      <div class="vertically-centered screwyou">
+        <span class="hi">Hi! What's your name? (hit enter!)</span>
+        <br>
+        <input class="yourname" type="text" name="name">
+      </div>
+    </div>
+
+    <div class="section-container">
+      <div class="section" id="greeting">
+        <div id="left-greeting">
+          <h2 id="makes-bg">Uncommon<br>Makes</h2>
+          <a id="register" 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSckTddiaLxXwWjWWGAwOKPdhtPTkxOrxBeGGSLFuNA4LIt5EQ/viewform" target="_blank">
+            REGISTER
+          </a>
+        </div>
+
+        <div id="right-greeting">
+          <h1 id="right-greeting-name"><noscript>Hello <b>Sailor</b></noscript></h1>
+          <h2 id="right-greeting-date">11.10.2018</h2>
+          <h3 id="right-greeting-details">9 AM - 5 PM<br/>Polsky Exchange North</h3>
+          <div style="float: right;">
+            <p id="wrong-name" onclick="resetNameCookie()"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="next">
+        <a href="#description"
+           onclick="document.querySelector('#description').scrollIntoView({behavior: 'smooth'}); return false;">
+          <img class="downarrow" src="img/downarrow.svg" />
+        </a>
+      </div>
+    </div>
+
+    <div class="section-container">
+      <div class="section" id="description">
+        <div class="vertically-centered">
+            <div class="container">
+              <p><b>Uncommon Makes</b> is a day-long experience focused on encouraging University of Chicago students to engage with new technologies, build a project of their own, and get involved with the tech community on campus. We'll provide space, food, workshops, time, and support for you to have a uniquely uncommon time.</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="next">
+        <a href="#faq"
+           onclick="document.querySelector('#faq').scrollIntoView({behavior: 'smooth'}); return false;">
+          <img class="downarrow" src="img/downarrow.svg" />
+        </a>
+      </div>
+    </div>
+
+    <div class="section-container">
+      <div class="section" id="faq">
+        <div class="vertically-centered">
+          <div class="container">
+            <p> <b>FAQ</b> </p>
+
+            <div onclick="toggleFAQ(1)">
+              <p style="cursor: pointer;" >+ Where is Uncommon Makes?</p>
+              <p id="faq-1">Uncommon Makes is at the Polsky Exchange North, 1452 E 53rd St. It's accessible by the Polsky Express and 53rd St. Express shuttles by day, and the Central and East shuttles by night.</p>
+            </div>
+
+            <div onclick="toggleFAQ(2)">
+              <p style="cursor: pointer;" >+ I've never been to a hackathon, can I come? What should I bring?</p>
+              <p id="faq-2">Of course! This is a space for you to explore on your own terms and learn something new. We will be providing as much support as we can along the way. Bring a laptop - we'll provide the rest!</p>
+            </div>
+
+            <div onclick="toggleFAQ(3)">
+              <p style="cursor: pointer;" >+ Do I have to be a CS major to participate?</p>
+              <p id="faq-3">Everyone is welcome, regardless of major.</p>
+            </div>
+
+            <div onclick="toggleFAQ(4)">
+              <p style="cursor: pointer;"  >+ I'm a graduate student at UChicago, can I come?</p>
+              <p id="faq-4">Yes, definitely!</p>
+            </div>
+
+            <div onclick="toggleFAQ(5)">
+              <p style="cursor: pointer;" >+ I don't attend UChicago, can I come?</p>
+              <p id="faq-5">Unfortunately not, but check out our hackathon in February!</p>
+            </div>
+
+            <div onclick="toggleFAQ(6)">
+              <p style="cursor: pointer;" >+ Do I need a team?</p>
+              <p id="faq-6">Nope! But we will facilitate making teams ;)</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="next">
+        <a href="#schedule"
+           onclick="document.querySelector('#schedule').scrollIntoView({behavior: 'smooth'}); return false;">
+          <img class="downarrow" src="img/downarrow.svg" />
+        </a>
+      </div>
+    </div>
+
+    <div class="section-container">
+      <div class="section" id="schedule">
+        <div class="vertically-centered">
+          <div class="container">
+            <p> <b>Schedule</b> <br> </p>
+
+            <table style="width:100%">
+              <tr>
+                <td>10:00 - 10:30</td>
+                <td>Opening Ceremony</td>
+              </tr>
+              <tr>
+                <td>10:30 - 12:00</td>
+                <td>Workshops</td>
+              </tr>
+              <tr>
+                <td>12:00 - 12:30</td>
+                <td>Project Work</td>
+              </tr>
+              <tr>
+                <td>12:30 - 01:00</td>
+                <td>Lunch</td>
+              </tr>
+              <tr>
+                <td>01:00 - 03:30</td>
+                <td>Project Work</td>
+              </tr>
+              <tr>
+                <td>03:30 - 04:00</td>
+                <td>Uncommon Break</td>
+              </tr>
+              <tr>
+                <td>04:00 - 05:00</td>
+                <td>Project Work</td>
+              </tr>
+              <tr>
+                <td>05:00 - 05:30</td>
+                <td>Project Presentations</td>
+              </tr>
+              <tr>
+                <td>05:30 - 06:00</td>
+                <td>Dinner</td>
+              </tr>
+              <tr>
+                <td>06:00 - 07:00</td>
+                <td>Closing Ceremony</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="next">
+        <a href="#greeting"
+           onclick="document.querySelector('#greeting').scrollIntoView({behavior: 'smooth'}); return false;">
+          <img class="downarrow" src="img/uparrow.svg" />
+        </a>
+      </div>
+    </div>
+
+  </body>
+</html>
